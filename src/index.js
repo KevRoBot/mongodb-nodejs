@@ -1,6 +1,7 @@
 import app from "./app";
+import { PORT } from "./config";
 import "./database";
 
 
-app.listen(5000);
-console.log('puerto en linea Servidor',5000);
+app.listen(PORT);
+console.log('puerto en linea Servidor',PORT);

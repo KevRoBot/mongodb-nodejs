@@ -11,21 +11,23 @@ app.set("views", path.join(__dirname, "views"));
 //Motor de plantillla engine
 
 const exphbs = create({
-  extname: '.hbs',
+  extname: ".hbs",
   layoutsDir: path.join(app.get("views"), "layouts"),
-  partialsDir: path.join(app.get("views"),"partials"),
-  defaultLayout:'main'
+  partialsDir: path.join(app.get("views"), "partials"),
+  defaultLayout: "main",
 });
 
 app.engine(".hbs", exphbs.engine);
 app.set("view engine", ".hbs");
 
-
 //middlewares
-app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
+app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use(indexRoutes);
+
+//archivos estaticos
+app.use(express.static(path.join(__dirname, "public")));
 
 export default app;

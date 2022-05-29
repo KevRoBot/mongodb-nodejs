@@ -1,14 +1,62 @@
-<h1>Produtos</h1>
-<form action="/tasks/{{task._id}}/edit" method="post">
-    <input type="text"name="title" placeholder="Nombre del producto" value="{{task.title}}">
-    <input type="text"name="titleG" placeholder="Nombre generico" value="{{task.titleG}}">
-    <input type="text"name="precio" placeholder="precio" value="{{task.precio}}">
-    <textarea 
-    name="descripcion"
-    rows="3"
-    placeholder="agrega una descripcion\categoria:"
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white rounded-0">
+  <h1>Produtos</h1>
+  <form action="/tasks/{{task._id}}/edit" method="post">
+    <div class="mb-3">
+    <input
+      type="text"
+      name="title"
+      placeholder="Nombre del producto"
+      value="{{task.title}}"
+      class="form-control rounded-0 bg-dark text-white"
+    />
+    </div>
+
+    <div class="mb-3">
+    <input
+      type="text"
+      name="titleG"
+      placeholder="Nombre generico"
+      value="{{task.titleG}}" 
+       class="form-control rounded-0 bg-dark text-white"
+    />
+    </div>
     
-    >{{task.descripcion}}</textarea>
-    <input type="text"name="cantidad" placeholder="cantidad de producto" value="{{task.cantidad}}">
-    <button>Actualizar</button>
-</form>
+    <div class="mb-3">
+    <input
+      type="text"
+      name="precio"
+      placeholder="precio"
+      value="{{task.precio}}"
+       class="form-control rounded-0 bg-dark text-white"
+    />
+    </div>
+    
+    <div class="mb-3">
+    <textarea
+      name="descripcion"
+      rows="3"
+      placeholder="agrega una descripcion\categoria:"
+       class="form-control rounded-0 bg-dark text-white"
+    >{{task.descripcion}}
+    </textarea>
+    </div>
+    
+    <div class="mb-3">
+    <input
+      type="text"
+      name="cantidad"
+      placeholder="cantidad de producto"
+       class="form-control rounded-0 bg-dark text-white"
+      value="{{task.cantidad}}"
+    />
+    </div>
+    
+    <button class="btn btn-primary">Actualizar</button>
+  </form>
+</div>
+        </div>
+    </div>
+</div>
