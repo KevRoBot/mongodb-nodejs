@@ -1,0 +1,42 @@
+<form action="tasks/add" method="POST">
+
+  <div>
+    <label for="title">Nombre del producto</label>
+    <input
+      type="String"
+      name="title"
+      placeholder="nombre del producto"
+      id="title"
+    />
+  </div>
+  <div>
+    <label for="titleG">Nombre generico</label>
+    <input
+      type="String"
+      name="titleG"
+      placeholder="nombre generico"
+      id="titleG"
+    />
+  </div>
+
+  <div>
+    <label for="precio">precio</label>
+    <input type="String" name="precio" placeholder="precio" id="precio" />
+  </div>
+
+  <div>
+    <label for="descripcion">categoria\descripcion:</label>
+    <textarea
+      name="descripcion"
+      placeholder="Descripcion"
+      id="descripcion"
+    ></textarea>
+  </div>
+
+  <div>
+    <label for="cantidad">cantidad</label>
+    <input type="String" name="cantidad" placeholder="cantidad" id="cantidad" />
+  </div>
+
+  <button>Agregar</button>
+</form>

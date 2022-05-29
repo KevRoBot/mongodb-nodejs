@@ -1,0 +1,14 @@
+<h1>Produtos</h1>
+<form action="/tasks/{{task._id}}/edit" method="post">
+    <input type="text"name="title" placeholder="Nombre del producto" value="{{task.title}}">
+    <input type="text"name="titleG" placeholder="Nombre generico" value="{{task.titleG}}">
+    <input type="text"name="precio" placeholder="precio" value="{{task.precio}}">
+    <textarea 
+    name="descripcion"
+    rows="3"
+    placeholder="agrega una descripcion\categoria:"
+    
+    >{{task.descripcion}}</textarea>
+    <input type="text"name="cantidad" placeholder="cantidad de producto" value="{{task.cantidad}}">
+    <button>Actualizar</button>
+</form>
